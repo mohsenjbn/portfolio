@@ -1,20 +1,13 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - pot_folio</title>
-    <!-- Favicons -->
-    <link href="~/assets/img/favicon.png" rel="icon">
-    <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
+    <title>@ViewData["Title"]</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/~/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="~/css/animate.css">
 
@@ -22,59 +15,92 @@
     <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="~/css/magnific-popup.css">
 
-
     <link rel="stylesheet" href="~/css/flaticon.css">
     <link rel="stylesheet" href="~/css/style.css">
-
 </head>
 <body>
 
-
     <div id="colorlib-page">
-        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle">
+            <i></i>
+        </a>
         <aside id="colorlib-aside" role="complementary" class="js-fullheight">
 
-            <h1 id="colorlib-logo" class="mb-4 mb-md-5"><a href="index.html" style="background-image: url(images/profile-img.jpg);">mohsen</a></h1>
+            <h1 id="colorlib-logo" class="mb-4 mb-md-5">
+                <a href="index.html" style="background-image: url(images/profile-img.jpg);">mohsen</a>
+            </h1>
             <nav id="colorlib-main-menu" role="navigation">
                 <ul>
-                    <li class="colorlib-active"><a href="@Url.Action("Index","Home")">Home</a></li>
-                    <li><a href="@Url.Action("Gallery","Home")">Gallery</a></li>
-                    <li><a href="@Url.Action("About","Home")">About</a></li>
-                    <li><a href="@Url.Action("Contact","Home")">Contact</a></li>
+                    <li class="colorlib-active">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="pricing.html">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
                 </ul>
             </nav>
 
 
-            
+            <div class="profile">
+                <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+
+
+                <div class="social-links mt-3 text-center">
+                    <a href="#" class="twitter">
+                        <i class="bx bxl-twitter"></i>
+                    </a>
+                    <a href="#" class="facebook">
+                        <i class="bx bxl-facebook"></i>
+                    </a>
+                    <a href="#" class="instagram">
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+                    <a href="#" class="google-plus">
+                        <i class="bx bxl-skype"></i>
+                    </a>
+                    <a href="#" class="linkedin">
+                        <i class="bx bxl-linkedin"></i>
+                    </a>
+                </div>
+            </div>
         </aside>
-
     </div>
 
-    <div id="colorlib-main">
+<div id="colorlib-main">
+    @RenderBody();
+</div>
+        <!-- loader -->
+        <div id="ftco-loader" class="show fullscreen">
+            <svg class="circular" width="48px" height="48px">
+                <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+                <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
+            </svg>
+        </div>
 
-        @RenderBody()
 
-    </div>
+        <script src="~/js/jquery.min.js"></script>
+        <script src="~/js/jquery-migrate-3.0.1.min.js"></script>
+        <script src="~/js/popper.min.js"></script>
+        <script src="~/js/bootstrap.min.js"></script>
+        <script src="~/js/jquery.easing.1.3.js"></script>
+        <script src="~/js/jquery.waypoints.min.js"></script>
+        <script src="~/js/jquery.stellar.min.js"></script>
+        <script src="~/js/owl.carousel.min.js"></script>
+        <script src="~/js/jquery.magnific-popup.min.js"></script>
+        <script src="~/js/jquery.animateNumber.min.js"></script>
+        <script src="~/js/scrollax.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+        <script src="~/js/google-map.js"></script>
+        <script src="~/js/main.js"></script>
 
-
-
-
-
-
-    <script src="~/js/jquery.min.js"></script>
-    <script src="~/js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="~/js/popper.min.js"></script>
-    <script src="~/js/bootstrap.min.js"></script>
-    <script src="~/js/jquery.easing.1.3.js"></script>
-    <script src="~/js/jquery.waypoints.min.js"></script>
-    <script src="~/js/jquery.stellar.min.js"></script>
-    <script src="~/js/owl.carousel.min.js"></script>
-    <script src="~/js/jquery.magnific-popup.min.js"></script>
-    <script src="~/js/jquery.animateNumber.min.js"></script>
-    <script src="~/js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="~/js/google-map.js"></script>
-    <script src="~/js/main.js"></script>
-    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
