@@ -23,7 +23,17 @@ namespace pot_folio.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Gallery()
+        {
+            return View();
+        }
+
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        public IActionResult contact()
         {
             return View();
         }
