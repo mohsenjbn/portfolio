@@ -1,0 +1,18 @@
+﻿@model IEnumerable<menu>
+
+
+<nav id="colorlib-main-menu" role="navigation">
+
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li class="colorlib-active">
+                <a asp-controller="@item.controller" asp-action="@item.Action">@item.Name</a>
+            </li>
+            @*<li class="colorlib-active">
+                <a href="@Url.Action(@item.Action,@item.controller)">@item.Name</a>
+            </li>*@
+        }
+    </ul>
+
+</nav>

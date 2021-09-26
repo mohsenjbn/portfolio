@@ -353,3 +353,4 @@ F:\personal\pot-folio\obj\Debug\net5.0\ref\pot-folio.dll
 F:\personal\pot-folio\obj\Debug\net5.0\pot-folio.pdb
 F:\personal\pot-folio\obj\Debug\net5.0\pot-folio.genruntimeconfig.cache
 F:\personal\pot-folio\obj\Debug\net5.0\Razor\Views\Home\component\portfolio.cshtml.g.cs
+F:\personal\pot-folio\obj\Debug\net5.0\Razor\Views\Home\component\menus.cshtml.g.cs
