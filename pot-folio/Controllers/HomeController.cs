@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using System.IO;
+using System.Net.Mime;
 
 namespace pot_folio.Controllers
 {
@@ -36,6 +38,15 @@ namespace pot_folio.Controllers
         public IActionResult contact()
         {
             return View();
+        }
+
+        public IActionResult download(string image)
+        {
+            
+            var Filebyte = System.IO.File.ReadAllBytes($"wwwroot/images/{image}");
+            string Filename = image;
+            return File(Filebyte, MediaTypeNames.Image.Jpeg, Filename);
+
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

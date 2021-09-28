@@ -23,8 +23,10 @@
                             <div class="absolute">
                                 <p>@item.Describtion.</p>
                             </div>
+                      
                             <p>
-                                <a href="single.html" class="custom-btn">View Portfolio</a>
+                                <a asp-controller="download" asp-action="downloadimg" asp-route-image="@item.image" class="custom-btn">Download</a>
+
                             </p>
                         </div>
                     </div>
