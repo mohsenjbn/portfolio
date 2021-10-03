@@ -40,6 +40,13 @@ namespace pot_folio.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult contact(contact modelContact)
+        {
+            return View();
+        }
+
+
         public IActionResult download(string image)
         {
             

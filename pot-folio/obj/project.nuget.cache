@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iGHbPnwGpIr46fBLKYkL4zSpHPz1LkD0avKMvXlRb8rT7lesW5qKy9ChvfQ+Yh3cwOh4oQoSLFVb1p562Y5M4A==",
+  "dgSpecHash": "6arFysPfcf5WZWy22cqhO6TAJ/jQDeqfu/6/517Btsnq4UbSon/tAqYkJtmajkolRhDwKhDsmixRONHZ/gjCpg==",
   "success": true,
-  "projectFilePath": "F:\\personal\\pot-folio\\pot-folio.csproj",
+  "projectFilePath": "F:\\pro-portfolio\\pot-folio\\pot-folio.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mohsen\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\mohsen\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
