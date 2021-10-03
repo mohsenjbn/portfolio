@@ -12,7 +12,7 @@ namespace pot_folio.Models
         [Required(ErrorMessage = "please type name ")]
         public string name { get; set; }
         [Required(ErrorMessage = "please enter email")]
-        [DataType(DataType.EmailAddress)]
+        [EmailAddress(ErrorMessage = "enter email adrress")]
         public string email { get; set; }
         [Required(ErrorMessage = "please enter subject ")]
         public string subject { get; set; }

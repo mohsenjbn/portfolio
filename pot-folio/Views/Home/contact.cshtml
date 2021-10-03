@@ -7,13 +7,39 @@
             <div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
                 <div class="contact-wrap w-100 p-md-5 p-4">
                     <h3 class="mb-4 heading">Get in touch</h3>
+                    
+
+                    @if (!string.IsNullOrEmpty(ViewBag.error))
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert"   >
+                            <strong>Error</strong> @ViewBag.error
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    }
+                    @if (!string.IsNullOrEmpty(ViewBag.sendsucsses))
+                    {
+                        <div class="alert alert-success alert-dismissible fade show" role="alert"   >
+                            <strong>success</strong> @ViewBag.sendsucsses
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    }
+
+                    
+                    
+                    
+                    
+
                     <form method="POST" id="contactForm" name="contactForm" class="contactForm" asp-action="contact">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label class="label" for="name">Full Name</label>
                                     <input type="text" class="form-control" name="name" id="name" placeholder="Name">
-                                    <span asp-validation-for="name"></span>
+                                    <span asp-validation-for="name"  style="color: red"></span>
 
                                 </div>
                             </div>
@@ -21,14 +47,14 @@
                                 <div class="form-group">
                                     <label class="label" for="email">Email Address</label>
                                     <input type="email" class="form-control" name="email" id="email" placeholder="Email">
-                                    <span asp-validation-for="email"></span>
+                                    <span asp-validation-for="email"  style="color: red"></span>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label class="label" for="subject">Subject</label>
                                     <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
-                                    <span asp-validation-for="subject"></span>
+                                    <span asp-validation-for="subject" style="color: red"></span>
 
                                 </div>
                             </div>

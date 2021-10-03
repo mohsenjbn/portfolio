@@ -43,6 +43,13 @@ namespace pot_folio.Controllers
         [HttpPost]
         public IActionResult contact(contact modelContact)
         {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.error = "Please enter the correct information ";
+                return View(modelContact);
+            }
+
+            ViewBag.sendsucsses = "Message sent successfully";
             return View();
         }
 
