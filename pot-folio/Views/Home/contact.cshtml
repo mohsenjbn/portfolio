@@ -50,16 +50,28 @@
                                     <span asp-validation-for="email"  style="color: red"></span>
                                 </div>
                             </div>
-                            <div class="col-md-12">
+                            @*<div class="col-md-12">
                                 <div class="form-group">
                                     <label class="label" for="subject">Subject</label>
                                     <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
                                     <span asp-validation-for="subject" style="color: red"></span>
 
                                 </div>
+                            </div>*@
+                            <div class="col-md-12" />
+                            <div >
+                                <label class="label" for="subject">Subject</label>
+                                <br />
+                                <select class="form-select col-12" asp-for="subjects" asp-items="@Model.subjects" />
+                                <option value="0" selected>Open this select menu</option>
+                                
+
+                               
                             </div>
+                           
                             <div class="col-md-12">
                                 <div class="form-group">
+
                                     <label class="label" for="#">Message</label>
                                     <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Message"></textarea>
                                 </div>

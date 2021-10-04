@@ -8,17 +8,20 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.IO;
 using System.Net.Mime;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace pot_folio.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+       private readonly List<subject> _subjects=new List<subject>()
+       {
+           new subject(1,"work"),
+           new subject(2,"personal"),
+           new subject(3,"add team")
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
+       };
+
 
         public IActionResult Index()
         {
@@ -37,7 +40,11 @@ namespace pot_folio.Controllers
 
         public IActionResult contact()
         {
-            return View();
+            var model=new contact()
+            {
+                subjects = new SelectList(_subjects,"Id","Name")
+            };
+            return View(model);
         }
 
         [HttpPost]
